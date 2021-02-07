@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from "next/link";
+
 
 
 function Plant (props) {
@@ -38,7 +40,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
+          <a className="text-blue-600" href="https://ubiklabs.tech">
             Tom's Greenhouse
           </a>
         </h1>
@@ -60,15 +62,17 @@ Reach Out at (Email)          </code>
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
+      <Link href="/signup">
         <a
           className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
           <div  className="h-4 ml-2" >TreeWind </div>
         </a>
+        </Link>
       </footer>
     </div>
   )
