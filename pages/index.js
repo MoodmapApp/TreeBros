@@ -29,7 +29,7 @@ Reach Out at (Email)          </code>
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
 <Image
-              className="h-56 w-full object-cover lg:absolute lg:h-full"
+              className="object-contain	"
               src="/static/plant.jpeg"
               alt=""
               unsized
