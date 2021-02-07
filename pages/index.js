@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>TreeWind</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -12,15 +13,14 @@ export default function Home() {
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
+            Tom's Greenhouse
           </a>
         </h1>
 
         <p className="mt-3 text-2xl">
-          Get started by editing{' '}
+          Browse, Peruse, Enjoy and {' '}
           <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
+Reach Out at (Email)          </code>
         </p>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
@@ -28,7 +28,12 @@ export default function Home() {
             href="https://nextjs.org/docs"
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+<Image
+              className="h-56 w-full object-cover lg:absolute lg:h-full"
+              src="/static/plant.jpeg"
+              alt=""
+              unsized
+            />            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
             <p className="mt-4 text-xl">
               Find in-depth information about Next.js features and API.
             </p>
@@ -74,7 +79,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          <div  className="h-4 ml-2" >TreeWind </div>
         </a>
       </footer>
     </div>
