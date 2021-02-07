@@ -1,6 +1,32 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+
+function Plant (props) {
+  const {ImageLink, Name, Description, ContactLink} = props;
+
+  return (
+    <a
+    href={ContactLink}
+    className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+  >
+    <Image
+      className="object-contain	"
+    src={ImageLink}
+      alt=""
+      unsized
+    />  
+    <h3 className="text-2xl font-bold">{Name}</h3>
+    <p className="mt-4 text-xl">
+    {Description}
+    </p>
+  </a>
+  )
+
+
+}
+
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -24,50 +50,12 @@ Reach Out at (Email)          </code>
         </p>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-<Image
-              className="object-contain	"
-              src="/static/plant.jpeg"
-              alt=""
-              unsized
-            />            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+         <Plant ImageLink = "/static/plant.jpeg"  Name = "Monstera" Description = "A beautiful collection of verigated plants" ContactLink = "https://moodmap.app"/>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+         <Plant ImageLink = "/static/plant.jpeg"  Name = "Brocolina" Description = "A beautiful collection of verigated plants" ContactLink = "https://moodmap.app"/>
+         <Plant ImageLink = "/static/plant.jpeg"  Name = "Sperilna" Description = "A beautiful collection of verigated plants" ContactLink = "https://moodmap.app"/>
+         <Plant ImageLink = "/static/plant.jpeg"  Name = "Vegansaurace" Description = "A beautiful collection of verigated plants" ContactLink = "https://moodmap.app"/>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
